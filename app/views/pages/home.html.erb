@@ -1,0 +1,25 @@
+<center>
+<div class="jumbotron center">
+	<center><h1>Welcome to J-app!</h1>
+		<img src=http://blog.teamtreehouse.com/wp-content/uploads/2012/08/apps.png alt="image" width="50%" /> </img>
+		<br>
+		<br>
+		<strong>
+			
+
+<% if user_signed_in? %>
+          # Turn Down For What?
+     <% else %>
+       <p>
+         <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+       </p>
+  <% end %>  
+</div>
+
+
+
+
+ 
+</div>
+</center>
