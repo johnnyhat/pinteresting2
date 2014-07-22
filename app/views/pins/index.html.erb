@@ -4,7 +4,7 @@
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
         <%= pin.description %><br/>
-        <strong><%= pin.user.email if pin.user %></strong>
+        <strong><%= pin.user.name if pin.user %></strong>
         <% if pin.user == current_user %>
           <%= link_to edit_pin_path(pin) do %>
               <span class="glyphicon glyphicon-edit"></span>
@@ -21,6 +21,8 @@
   <% end %>
 </div>
 
+
+
 <div class="center">
-   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+   <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
 </div>
